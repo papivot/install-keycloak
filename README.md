@@ -12,7 +12,7 @@ sudo useradd -r -g keycloak -d /opt/keycloak -s /sbin/nologin keycloak
 # Install product
 sudo wget https://github.com/keycloak/keycloak/releases/download/22.0.1/keycloak-22.0.1.zip -O /opt/keycloak-22.0.1.zip
 sudo unzip /opt/keycloak-22.0.1.zip -d /opt
-sudo mv keycloak-22.0.1 keycloak
+sudo mv /opt/keycloak-22.0.1 /opt/keycloak
 sudo chmod o+x /opt/keycloak/bin
 sudo chown -R keycloak /opt/keycloak
 ```
