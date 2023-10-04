@@ -17,7 +17,7 @@ openssl req -newkey rsa:2048 -nodes -keyout key.pem -subj "/C=US/ST=VA/L=Ashburn
 
 ### Execute the Docker container
 ```
-docker run --name mykeycloak \
+docker run -d --name mykeycloak \
  -p 8443:8443 \
  -e KEYCLOAK_ADMIN=admin \
  -e KEYCLOAK_ADMIN_PASSWORD=change_me \
