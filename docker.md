@@ -30,3 +30,11 @@ keycloak:22.0.3 start --optimized
 ```
 
 Access the application at - https://hostname:8443 
+
+or 
+
+use the `docker-compose.yaml` to run as  a detached option. 
+
+```
+docker-compose up -d
+```
