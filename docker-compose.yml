@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  keycloak:
+    image: keycloak:22.0.3
+    container_name: keycloak
+    ports:
+      - "8443:8443"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=change_me
+      - KC_HOSTNAME=bastion0.navlab.io
+      - KC_HTTPS_CERTIFICATE_FILE=/opt/keycloak/conf/certificate.pem
+      - KC_HTTPS_CERTIFICATE_KEY_FILE=/opt/keycloak/conf/key.pem
+    volumes:
+      - ./certificate.pem:/opt/keycloak/conf/certificate.pem
+      - ./key.pem:/opt/keycloak/conf/key.pem
+    command: start --optimized
