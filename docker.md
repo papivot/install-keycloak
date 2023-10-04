@@ -21,7 +21,7 @@ docker run --name mykeycloak \
  -p 8443:8443 \
  -e KEYCLOAK_ADMIN=admin \
  -e KEYCLOAK_ADMIN_PASSWORD=change_me \
- -e KC_HOSTNAME= $(hostname --fqdn) \
+ -e KC_HOSTNAME=$(hostname --fqdn) \
  -e KC_HTTPS_CERTIFICATE_FILE=/opt/keycloak/conf/certificate.pem \
  -e KC_HTTPS_CERTIFICATE_KEY_FILE=/opt/keycloak/conf/key.pem \
  -v ${PWD}/certificate.pem:/opt/keycloak/conf/certificate.pem \
